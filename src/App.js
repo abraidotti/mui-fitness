@@ -13,13 +13,19 @@ import {
 import { Delete } from '@material-ui/icons'
 import { withStyles } from '@material-ui/core/styles'
 
-const styles = {
+
+const styles = ({ spacing: { unit } }) => ({
   root: {
-    margin: 20,
-    padding: 20,
+    margin: unit,
+    padding: unit * 3,
     maxWidth: 400
+  },
+  form: {
+    display: 'flex',
+    alignItems: 'baseline',
+    justifyContent: 'space-evenly'
   }
-}
+})
 
 export default withStyles(styles)(
   class App extends Component {
@@ -65,7 +71,7 @@ export default withStyles(styles)(
 
       return (
         <Paper className={classes.root}>
-          <Typography variant="display1" align="center" gutterBottom>
+          <Typography variant="h4" align="center" gutterBottom>
             Exercises
           </Typography>
 
